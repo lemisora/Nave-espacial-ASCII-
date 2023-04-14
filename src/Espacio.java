@@ -1,15 +1,25 @@
 import java.util.Random;
 class Espacio{
-  String nombre;
-  int distancia;
-  int velocidad;
+  protected String nombre;
+  protected String tipo;
+  protected int distancia;
+  protected int velocidad;
 
-  int noPlanetas;
-  int noAsteroides;
-  int noHoyosNegros;
-  int noObjetosInteres;
+  private int noPlanetas;
+  private int noAsteroides;
+  private int noHoyosNegros;
+  private int noObjetosInteres;
 
-  public void setDistanciaObjetos(){
+  static public Nave sh;
+
+  public Espacio(){}; //Constructor por defecto de la clase Espacio
+
+  public Espacio(String nombre,String tipo){  //Constructor del espacio (objetos celestiales)
+    this.nombre=nombre;
+    this.tipo=tipo;
+  }
+
+  public void setDistanciaObjeto(){
     Random rand = new Random();
     this.velocidad=rand.nextInt(5000)+30;
   }

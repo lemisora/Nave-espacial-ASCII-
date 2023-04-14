@@ -1,10 +1,23 @@
 import java.util.Random;
-public class Nave {
+class Nave {
   private String nombre;
   private String nombrePiloto;
   private int velocidadMax;
   private int noBalas;
   private int vida;
+
+  public Nave(String nombre,String nombrePiloto){ //Constructor de la nave
+    this.nombre=nombre;
+    this.nombrePiloto=nombrePiloto;
+  }
+
+  void Disparar(){
+
+  }
+
+  void Desplazarse(){
+
+  }
 
   //Getters y setters del nombre
   public void setNombre(String nombre){
@@ -24,8 +37,9 @@ public class Nave {
   }
 
   public void generaVelocidad(){
-    Random rand = new Random;
+    Random rand = new Random();
     this.velocidadMax=rand.nextInt(500)+100;
   }
+
 
 }

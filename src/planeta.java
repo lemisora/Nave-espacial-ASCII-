@@ -1,29 +1,29 @@
-public class Planeta extends Espacio{
-    private String nombre;
-    private String tipo;
+class Planeta extends Espacio{
     private boolean tieneVida;
-
-    public Planeta(String nombre, String tipo, boolean tieneVida) {
-        this.nombre = nombre;
-        this.tipo = tipo;
-        this.tieneVida = tieneVida;
+    Random vida = new Random();
+    int controlVida;
+    public Planeta(String nombre, String tipo) { //Constructor del planeta
+      super(nombre,tipo);
+      this.controlVida = vida.nextInt(2)+1; //Mediante un número aleatorio se define si el planeta posee vida o nombre
+                                            //Posee vida si es que el número es 1
+                                            //Si es 2 entonces no posee vida
+      if (controlVida==1){
+        this.tieneVida=true;
+      }else{
+        this.tieneVida=false;
+      }
     }
 
     public String getNombre() {
-        return this.nombre;
+      return this.nombre;
     }
 
     public String getTipo() {
-        return this.tipo;
+      return this.tipo;
     }
 
     public boolean tieneVida() {
-        return this.tieneVida;
+      return this.tieneVida;
     }
 
-    @Override
-    public String toString() {
-        return "Planeta " + this.nombre + " (" + this.tipo + "), " +
-                (this.tieneVida ? "con vida" : "sin vida");
-    }
 }
