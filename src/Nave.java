@@ -1,5 +1,9 @@
 import java.util.Random;
 class Nave {
+  //Atributos a los que accederá el método main para representarlos en pantalla
+  private static final char simNave = '^';
+  private static final char simBala = '|';
+
   private String nombre;
   private String nombrePiloto;
   private int velocidadMax;
@@ -12,11 +16,11 @@ class Nave {
   }
 
   void Disparar(){
-
+    
   }
 
   void Desplazarse(){
-
+    
   }
 
   //Getters y setters del nombre

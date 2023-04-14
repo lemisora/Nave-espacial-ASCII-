@@ -1,4 +1,8 @@
 class Planeta extends Espacio{
+    //Atributos a los que accederá el método main para representarlos en pantalla
+    private static final char simPlanetaVivo='O';
+    private static final char simPlanetMuerto='o';
+
     private boolean tieneVida;
     Random vida = new Random();
     int controlVida;

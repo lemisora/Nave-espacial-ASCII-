@@ -25,6 +25,6 @@ class Juego{
     nombreNavePiloto=entrada.next();
     Nave ship = new Nave(nombreNave,nombreNavePiloto);
     Espacio.sh=ship;
-
+    
   }
 }
