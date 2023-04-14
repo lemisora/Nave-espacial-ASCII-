@@ -1,8 +1,10 @@
-import java.util.*;
+import java.util.Random;
 public class Nave {
   private String nombre;
   private String nombrePiloto;
   private int velocidadMax;
+  private int noBalas;
+  private int vida;
 
   //Getters y setters del nombre
   public void setNombre(String nombre){
