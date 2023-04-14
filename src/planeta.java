@@ -1,4 +1,4 @@
-public class Planeta {
+public class Planeta extends Espacio{
     private String nombre;
     private String tipo;
     private boolean tieneVida;
