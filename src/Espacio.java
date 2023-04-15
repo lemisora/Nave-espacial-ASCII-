@@ -44,6 +44,8 @@ class Espacio{
     this.noObjetosInteres=obj.nextInt(10)+1;
   }
 
-  
-
+  public void NoObjetosIntF(){ 
+    if (DistanciaObjeto<2 && Velocidad>=1500 && Velocidad<=3000) 
+      vida = vida-20
+    }
 }
