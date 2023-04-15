@@ -1,4 +1,4 @@
-class Planeta extends Espacio{
+class planeta extends Espacio{
     //Atributos a los que accederá el método main para representarlos en pantalla
     private static final char simPlanetaVivo='O';
     private static final char simPlanetMuerto='o';
