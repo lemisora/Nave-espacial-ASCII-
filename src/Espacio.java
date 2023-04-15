@@ -46,6 +46,6 @@ class Espacio{
 
   public void NoObjetosIntF(){ 
     if (DistanciaObjeto<2 && Velocidad>=1500 && Velocidad<=3000) 
-      vida = vida-20
+      vida = vida-20;
     }
 }
