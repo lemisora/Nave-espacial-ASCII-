@@ -18,6 +18,12 @@ class planeta extends Espacio{
       }
     }
 
+    @Override
+    public void setNoObjetos() {
+      Random rand = new Random();
+      
+    }
+
     public String getNombre() {
       return this.nombre;
     }

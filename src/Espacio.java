@@ -25,7 +25,7 @@ class Espacio{
 
   public void setVelocidad(){
     Random rand2=new Random();
-    this.distancia=rand2.nextInt(1500)+1;
+    this.velocidad=rand2.nextInt(5000)+30;
    }
 
   public void setNoPlanetas(){
