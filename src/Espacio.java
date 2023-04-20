@@ -19,11 +19,10 @@ class Espacio{
     this.tipo=tipo;
   }
 
-  public void setDistanciaObjeto(){
-    Random rand = new Random();
-    this.velocidad=rand.nextInt(5000)+30;
-  }
-  
+  //Métodos abstractos
+  public abstract void setDistancia();
+  public abstract void setNoObjetos();
+
   public void setVelocidad(){
     Random rand2=new Random();
     this.distancia=rand2.nextInt(1500)+1;
@@ -43,9 +42,4 @@ class Espacio{
     Random obj=new Random();
     this.noObjetosInteres=obj.nextInt(10)+1;
   }
-
-  public void NoObjetosIntF(){ 
-    if (distancia<2 && velocidad>=1500 && velocidad<=3000) 
-      vida = vida-20;
-    }
 }
