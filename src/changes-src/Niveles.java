@@ -1,5 +1,31 @@
-class Niveles {    
+class Niveles {   
+    protected int noPlanetas;
+    protected int noAsteroides;
+    protected int noHoyosNegros;
+    protected int noBalas;
+    protected int noCapsulas;
+
+    protected int nivel;
+    protected boolean PASS;
+    protected boolean sePuedeDisparar;
+    
+    public int determinaSiguienteNivel(){
+        return nivel;
+    }
+    public boolean ganaNivel(){
+        return PASS;
+    }
+    public int calculaRestanteBalas(){
+        return noBalas;
+    }
+    public int calculaRestanteCapsulas(){
+        return noCapsulas;
+    }
+    public boolean posibDisparar(){
+        return sePuedeDisparar;
+    }
 }
+
 
 /////////////////////////////////////////////////////////
 //                   CLASE DEL NIVEL 1                 //
