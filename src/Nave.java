@@ -1,26 +1,18 @@
 import java.util.Random;
-class Nave {
-  //Atributos a los que accederá el método main para representarlos en pantalla
-  private static final char simNave = '^';
-  private static final char simBala = '|';
-
+class Nave{
   private String nombre;
   private String nombrePiloto;
-  private int velocidadMax;
-  private int noBalas;
-  private int vida;
+  protected int velocidadMax;
+  protected int noBalas;
+  protected int vida;
 
   public Nave(String nombre,String nombrePiloto){ //Constructor de la nave
     this.nombre=nombre;
     this.nombrePiloto=nombrePiloto;
   }
 
-  void Disparar(){
-    
-  }
-
-  void Desplazarse(){
-    
+  public void Disparar(){
+    this.noBalas=this.noBalas-100;
   }
 
   //Getters y setters del nombre
@@ -43,6 +35,12 @@ class Nave {
   public void generaVelocidad(){
     Random rand = new Random();
     this.velocidadMax=rand.nextInt(500)+100;
+  }
+  public void setNoBalas(int balas){
+    this.noBalas=balas;
+  }
+  public int getNoBalas(){
+    return noBalas;
   }
 
 
