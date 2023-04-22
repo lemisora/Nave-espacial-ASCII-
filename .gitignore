@@ -1,3 +1,11 @@
 src/Espacio.class
 src/Juego.class
 src/Nave.class
+src/Asteroide.class
+src/HoyoNegro.class
+src/ObjetInt.class
+src/niveles/Niv3.class
+src/niveles/Niv2.class
+src/niveles/Niv1.class
+src/niveles/Niveles.class
+src/planeta.class

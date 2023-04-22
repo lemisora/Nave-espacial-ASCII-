@@ -1,5 +1,5 @@
 import java.util.Random;
-abstract public class Espacio{
+public class Espacio{
   protected String nombre;
   protected String tipo;
   protected int distancia;
@@ -14,9 +14,6 @@ abstract public class Espacio{
     this.nombre=nombre;
     this.tipo=tipo;
   }
-
-  //Método abstracto
-  public abstract void setResistencia();
 
   //Métodos setters y getters
   public void setVelocidad(){
@@ -52,11 +49,6 @@ class planeta extends Espacio{
   public boolean tieneVida() {
     return this.tieneVida;
   }
-  @Override
-  public void setResistencia(){
-    Random res = new Random();
-    this.resistencia=res.nextInt(800)+200;
-  }
 }
 
 ////////////////////////////////////////////////////////
@@ -65,11 +57,6 @@ class planeta extends Espacio{
 class Asteroide extends Espacio{
   public Asteroide(String nombre,String tipo){
     super(nombre,tipo);
-  }
-  @Override
-  public void setResistencia(){
-    Random res = new Random();
-    this.resistencia=res.nextInt(1200)+600;
   }
 }
 
@@ -80,11 +67,6 @@ class HoyoNegro extends Espacio{
   public HoyoNegro(String nombre,String tipo){
     super(nombre, tipo);
   }
-  @Override
-  public void setResistencia(){
-    Random res = new Random();
-    this.resistencia=res.nextInt(3000)+1500;
-  }
 }
 
 ////////////////////////////////////////////////////////
@@ -93,10 +75,5 @@ class HoyoNegro extends Espacio{
 class ObjetInt extends Espacio{
   public ObjetInt(String nombre,String tipo){
     super(nombre, tipo);
-  }
-  @Override
-  public void setResistencia(){
-    Random res = new Random();
-    this.resistencia=res.nextInt(600)+200;
   }
 }

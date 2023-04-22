@@ -1,7 +1,7 @@
 import java.util.Random;
-class Nave{
-  private String nombre;
-  private String nombrePiloto;
+public class Nave{
+  protected String nombre;
+  protected String nombrePiloto;
   protected int velocidadMax;
   protected int noBalas;
   protected int vida;
