@@ -10,10 +10,11 @@ public class Nave{
   public Nave(String nombre,String nombrePiloto){ //Constructor de la nave
     this.nombre=nombre;
     this.nombrePiloto=nombrePiloto;
+    this.noBalas =10000;
   }
 
-  public void Disparar(){
-    this.noBalas=this.noBalas-100;
+  public void Disparar(int disparo){
+    this.noBalas=this.noBalas-disparo;
   }
 
   //Getters y setters del nombre
