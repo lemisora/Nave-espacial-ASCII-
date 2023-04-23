@@ -1,7 +1,8 @@
+package objetosEspaciales;
 import java.util.Random;
 public class Nave{
   protected String nombre;
-  protected String nombrePiloto;
+  public String nombrePiloto;
   protected int velocidadMax;
   protected int noBalas;
   protected int vida;
@@ -9,7 +10,6 @@ public class Nave{
   public Nave(String nombre,String nombrePiloto){ //Constructor de la nave
     this.nombre=nombre;
     this.nombrePiloto=nombrePiloto;
-    this.setVelocidad();
   }
 
   public void Disparar(){
@@ -43,6 +43,5 @@ public class Nave{
   public int getNoBalas(){
     return noBalas;
   }
-
 
 }

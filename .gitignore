@@ -19,3 +19,4 @@ bin/planeta.class
 bin/generaCadena/GeneradorNombresAleatorios.class
 bin/niveles/Niv1.class
 bin/niveles/Niveles.class
+.vscode/launch.json

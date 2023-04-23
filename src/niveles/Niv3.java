@@ -8,13 +8,13 @@ public class Niv3 extends Niveles{
     protected boolean absorbido;            //Determina si es que se ha "chocado" con un hoyo negro
     public Niv3(){                          //Constructor de la clase Niv3
         super();
-        this.noHoyosNegros = generaCuerpos.nextInt(10)+5;
-        this.noObjetosInt = generaCuerpos.nextInt(10)+5;
-        this.noCuerpos = this.noHoyosNegros + this.noObjetosInt;
+        this.HoyosNegros = generaCuerpos.nextInt(10)+5;
+        this.ObjetosInt = generaCuerpos.nextInt(10)+5;
+        this.Cuerpos = this.HoyosNegros + this.ObjetosInt;
     }
 
     @Override
-    public int getNoCuerpos(){
-        return this.noCuerpos;
+    public int getNoCuerposDestruidos(){
+        return this.Cuerpos;
     }
 }

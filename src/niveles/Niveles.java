@@ -1,38 +1,32 @@
 package niveles;
 import java.util.Random;
 abstract public class Niveles {   
-    protected int noPlanetas;
-    protected int noAsteroides;
-    protected int noHoyosNegros;
-    protected int noBalas = 16000;
-    protected int noObjetosInt;
-    protected int noCuerpos;
-    protected int noCapsulas;
+    public int Planetas;
+    public int ObjetosInt;
+    
+    protected int Asteroides;
+    protected int HoyosNegros;
+    protected int Balas;
+    
+    protected int Cuerpos;
+    protected int Capsulas;
 
-    protected int nivel;
-    protected boolean PASS;
     protected boolean sePuedeDisparar;
 
     protected Random generaCuerpos = new Random();
 
     public Niveles(){       //Constructor de la clase
     }
-    
-    public int determinaSiguienteNivel(){
-        return nivel;
-    }
-    public boolean ganaNivel(){
-        return PASS;
-    }
     public int calculaRestanteBalas(){
-        return noBalas;
+        return Balas;
     }
     public int calculaRestanteCapsulas(){
-        return noCapsulas;
+        return Capsulas;
     }
     public boolean posibDisparar(){
         return sePuedeDisparar;
     }
-    abstract public int getNoCuerpos();
+    abstract public int getNoCuerposDestruidos();
+
 }
 
