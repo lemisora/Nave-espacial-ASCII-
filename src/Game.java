@@ -7,6 +7,7 @@ public class Game {
     private static final int HEIGHT = 25;
     private static final char SHIP = '^';
     private static final char ASTEROID = '*';
+    private static final char BALA = '|';
     private static final int ASTEROID_SPEED = 3;
     private static final int MAX_ASTEROIDS = 5;
 
@@ -70,6 +71,8 @@ public class Game {
                 x--;
             } else if (input.equals("d") && x < WIDTH - 1) {
                 x++;
+            } else if(input.equals("l")){
+                System.out.print(BALA);
             }
 
             // Comprobar colisión con asteroides

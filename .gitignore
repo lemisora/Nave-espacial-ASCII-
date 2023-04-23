@@ -20,3 +20,5 @@ bin/generaCadena/GeneradorNombresAleatorios.class
 bin/niveles/Niv1.class
 bin/niveles/Niveles.class
 .vscode/launch.json
+src/Game.java
+src/Game.java
