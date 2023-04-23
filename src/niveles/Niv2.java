@@ -10,5 +10,11 @@ public class Niv2 extends Niveles{
         super();
         this.noAsteroides = generaCuerpos.nextInt(10)+5;
         this.noObjetosInt = generaCuerpos.nextInt(10)+5;
+        this.noCuerpos = this.noAsteroides + this.noObjetosInt;
+    }
+
+    @Override
+    public int getNoCuerpos(){
+        return this.noCuerpos;
     }
 }

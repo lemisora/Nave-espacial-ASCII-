@@ -9,3 +9,13 @@ src/niveles/Niv2.class
 src/niveles/Niv1.class
 src/niveles/Niveles.class
 src/planeta.class
+bin/Asteroide.class
+bin/Espacio.class
+bin/Juego.class
+bin/HoyoNegro.class
+bin/Nave.class
+bin/ObjetInt.class
+bin/planeta.class
+bin/generaCadena/GeneradorNombresAleatorios.class
+bin/niveles/Niv1.class
+bin/niveles/Niveles.class

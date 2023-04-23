@@ -9,6 +9,7 @@ public class Nave{
   public Nave(String nombre,String nombrePiloto){ //Constructor de la nave
     this.nombre=nombre;
     this.nombrePiloto=nombrePiloto;
+    this.setVelocidad();
   }
 
   public void Disparar(){
@@ -32,7 +33,7 @@ public class Nave{
     return this.nombrePiloto;
   }
 
-  public void generaVelocidad(){
+  public void setVelocidad(){
     Random rand = new Random();
     this.velocidadMax=rand.nextInt(500)+100;
   }

@@ -6,6 +6,8 @@ public class Espacio{
   protected int velocidad;
   protected int resistencia;                  //Es el que medirá cuanto queda de vida para un objeto en cuestión
 
+  protected Random vel = new Random(); 
+
   static public Nave sh;                      //Asoociación de la nave al espacio
 
   public Espacio(){};                         //Constructor por defecto de la clase Espacio
@@ -13,13 +15,34 @@ public class Espacio{
   public Espacio(String nombre,String tipo){  //Constructor del espacio (objetos celestiales)
     this.nombre=nombre;
     this.tipo=tipo;
+    this.setVelocidad();
   }
 
   //Métodos setters y getters
   public void setVelocidad(){
+    this.velocidad = vel.nextInt(1000)+200;
+    if(this.velocidad>=200 && this.velocidad < 400){
+      this.velocidad = 2;
+    }
+    if(this.velocidad >= 400 && this.velocidad < 600){
+      this.velocidad = 4;
+    }
+    if(this.velocidad>=600 && this.velocidad < 800){
+      this.velocidad = 6;
+    }
+    if(this.velocidad >= 800 && this.velocidad < 1000){
+      this.velocidad = 8;
+    }
+    if(this.velocidad == 1000){
+      this.velocidad = 10;
+    }
+  }
+  public int getVelocidad(){
+    return velocidad;
   }
   public void setDistancia(){
-  }  
+  }
+
   public String getNombre() {
     return this.nombre;
   }

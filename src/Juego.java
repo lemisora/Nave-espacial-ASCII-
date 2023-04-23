@@ -2,7 +2,7 @@ import java.util.Scanner;
 import java.io.Console;
 import java.util.Random;
 import niveles.*;
-
+import generaCadena.*;
 
 class Juego {
     private static final int ANCHO=100;
@@ -15,12 +15,15 @@ class Juego {
     private static final char PLANETA_COMUN = 'o';
     private static final char HOYO_NEGRO = '0';
     private static final char OBJ_INT = '?';
+    private static final char BALA = '|';
 
     //Resistencia de cada objeto
     private static final int RES_NAVE = 4000;
     private static final int RES_ASTEROIDE = 3000;
     private static final int RES_PLANETA = 2500;
     private static final int RES_HOYO = 5000;
+
+    private static int velPlaneta;
 
     private static final int dañoBala = 500;
     private static int maxCuerpos;
@@ -36,11 +39,13 @@ class Juego {
     private static boolean perdido = false;
     
     static Scanner entrada = new Scanner(System.in);
+    static GeneradorNombresAleatorios nombreCuerpos = new GeneradorNombresAleatorios();
     
     ///////////////////////////////////////////////////////////
     //              CLASE EJECUTABLE MAIN                    //
     ///////////////////////////////////////////////////////////
     public static void main(String [] args){
+        String nomObjetos;
         String nombreNave;
         String nombreNavePiloto;
         Console terminal = System.console();
@@ -62,6 +67,9 @@ class Juego {
         if(resp.equals(yes) || resp.equals(YES)){
           Niv1 Nivel1 = new Niv1();
           maxCuerpos = Nivel1.getNoCuerpos();
+          nomObjetos = nombreCuerpos.generarNombreAleatorio(10);
+          planeta p1 =  new planeta(nomObjetos,"Planeta");
+          velPlaneta = p1.getVelocidad(); 
           cuerpoX = new int[maxCuerpos];
           cuerpoY = new int[maxCuerpos];
           for(int i=0;i<maxCuerpos;i++){
@@ -98,6 +106,25 @@ class Juego {
               }
             }
             terminal.printf("\n");
+          }
+          terminal.printf("\n");
+          //Para el movimiento de los asteroides
+          for(int i=0;i<maxCuerpos;i++){
+            cuerpoY[i] += velPlaneta;
+            if(cuerpoX[i] >= ALTO){
+              cuerpoX[i] = numAl.nextInt(ANCHO);
+              cuerpoY[i] = -numAl.nextInt(ALTO);
+            }
+          }
+
+          //Para mover la nave y disparar
+          String input = terminal.readLine();
+          if(input.equals("a") && x>0){
+            x--;
+          }else if(input.equals("d") && x<ANCHO-1){
+            x++;
+          }else if(input.equals("l")){
+            System.out.print(BALA);
           }
         }
       }
