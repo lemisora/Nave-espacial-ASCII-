@@ -1,12 +1,13 @@
-class planeta extends Espacio{
-    //Atributos a los que accederá el método main para representarlos en pantalla
-    private static final char simPlanetaVivo='O';
-    private static final char simPlanetMuerto='o';
-
+package objetosEspaciales;
+import java.util.*;
+//////////////////////////////////////////////////////////////
+//                      CLASE PLANETA                       //
+//////////////////////////////////////////////////////////////
+public class planeta extends Espacio{
     private boolean tieneVida;
     Random vida = new Random();
     int controlVida;
-    public Planeta(String nombre, String tipo) { //Constructor del planeta
+    public planeta(String nombre, String tipo) { //Constructor del planeta
       super(nombre,tipo);
       this.controlVida = vida.nextInt(2)+1; //Mediante un número aleatorio se define si el planeta posee vida o nombre
                                             //Posee vida si es que el número es 1
@@ -17,23 +18,8 @@ class planeta extends Espacio{
         this.tieneVida=false;
       }
     }
-
-    @Override
-    public void setNoObjetos() {
-      Random rand = new Random();
-      
-    }
-
-    public String getNombre() {
-      return this.nombre;
-    }
-
-    public String getTipo() {
-      return this.tipo;
-    }
-
     public boolean tieneVida() {
       return this.tieneVida;
     }
-
 }
+  

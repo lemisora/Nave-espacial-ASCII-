@@ -1,26 +1,20 @@
+package objetosEspaciales;
 import java.util.Random;
-class Nave {
-  //Atributos a los que accederá el método main para representarlos en pantalla
-  private static final char simNave = '^';
-  private static final char simBala = '|';
-
-  private String nombre;
-  private String nombrePiloto;
-  private int velocidadMax;
-  private int noBalas;
-  private int vida;
+public class Nave{
+  protected String nombre;
+  public String nombrePiloto;
+  protected int velocidadMax;
+  protected int noBalas;
+  protected int vida;
 
   public Nave(String nombre,String nombrePiloto){ //Constructor de la nave
     this.nombre=nombre;
     this.nombrePiloto=nombrePiloto;
+    this.noBalas =10000;
   }
 
-  void Disparar(){
-    
-  }
-
-  void Desplazarse(){
-    
+  public void Disparar(int disparo){
+    this.noBalas=this.noBalas-disparo;
   }
 
   //Getters y setters del nombre
@@ -40,10 +34,15 @@ class Nave {
     return this.nombrePiloto;
   }
 
-  public void generaVelocidad(){
+  public void setVelocidad(){
     Random rand = new Random();
     this.velocidadMax=rand.nextInt(500)+100;
   }
-
+  public void setNoBalas(int balas){
+    this.noBalas=balas;
+  }
+  public int getNoBalas(){
+    return noBalas;
+  }
 
 }
